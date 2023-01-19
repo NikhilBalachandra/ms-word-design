@@ -1,0 +1,14 @@
+.ProseMirror {
+    background-color: rgb(255, 255, 255);
+    width: 21cm;
+    height: 29.7cm;
+    padding: 1in;
+    display: block;
+    border: 1px solid rgb(198, 198, 198);
+    box-shadow: 0px 0px 1px 1px rgb(223, 223, 223);
+    font-size: 12pt;
+}
+
+.ProseMirror-focused {
+    outline: 0px solid transparent;
+}

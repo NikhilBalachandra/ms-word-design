@@ -1,0 +1,128 @@
+.ribbon {
+    .tab {
+        display: flex;
+        flex-direction: row;
+        padding: 7px;
+
+        p {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        button {
+            padding: 3px;
+            border: 1px solid transparent;
+            background-color: transparent;
+            border-radius: 3px;
+            display: flex;
+
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        button.is-active {
+            background-color: rgb(195, 195, 195);
+        }
+
+        select {
+            margin-right: 2px;
+        }
+
+        button:hover {
+            background-color: rgba(211, 211, 211);
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            button+button {
+                width: auto;
+                height: auto;
+            }
+
+            bottom+button:hover {
+                background-color: blue;
+            }
+        }
+
+        >.section {
+            padding: 10px;
+        }
+
+        .section+.section {
+            border-left: 1px solid rgb(212, 212, 212);
+        }
+
+        .rows {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .rows+.rows {
+            padding: 5px 0px 0px 0px;
+        }
+
+        .cols {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .style-selector {
+            background-color: white;
+            border-radius: 3px;
+            border: 1px solid rgb(214, 214, 214);
+            display: flex;
+            flex-direction: row;
+            padding: 5px;
+            align-items: stretch;
+            align-content: stretch;
+
+            button {
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: 100px;
+                height: 100%;
+                height: 50px;
+                overflow: hidden;
+                flex: 1;
+                border: 1px solid rgb(214, 214, 214);
+
+                p, h1, h2, h3, h4, h5, h6 {
+                    margin: 0;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                margin: 0 5px;
+            }
+
+            button:hover {
+                border-color: rgb(129, 155, 198);
+            }
+
+            button::after {
+                position: absolute;
+                content: attr(name);
+                bottom: 0;
+                left: 0;
+                background-color: rgb(239, 239, 239);
+                font-size: 10px;
+                width: 100%;
+                text-align: center;
+                padding: 1px;
+            }
+        }
+    }
+}
+
+.OfficeIconColors_DynamicColor {
+    fill: yellow;
+}
