@@ -25,9 +25,11 @@ function App() {
           OrderedList
         ],
         content: `
-            <h1>Hello</h1>
+            <h1>Hello!</h1>
             <p>This is a demonstration of Microsoft Word UI (macOS)
-            design in HTML/CSS/JS. Try typing some text here!</p>
+            design in HTML/CSS/JS.</p>
+
+            <p><b>This is a live editor. Try editing some text here!</b></p>
             
             <p>It is built in <a href="https://reactjs.org/">React</a> and uses
             <a href="https://prosemirror.net/">ProseMirror</a> for the rich text
