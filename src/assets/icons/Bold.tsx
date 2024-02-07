@@ -12,3 +12,4 @@ const SvgBold = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 export default SvgBold;
+

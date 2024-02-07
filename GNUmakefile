@@ -18,13 +18,25 @@ $(ROOT_DIR)/node_modules/.package-lock.json: package.json package-lock.json
 .PHONY: install
 install: $(ROOT_DIR)/node_modules/.package-lock.json
 
+./src/assets/icons/%.tsx: ./src/assets/icons/%.svg
+	npx @svgr/cli -- $(@:tsx=svg) > $@ || rm $@
+
+ICONS := $(patsubst %.svg,%.tsx,$(wildcard ./src/assets/icons/*.svg))
+
 .PHONY: build
-build: install
-	npx @svgr/cli --out-dir ./src/assets/icons -- ./src/assets/icons
+build: install $(ICONS)
 	npm run build
+
+.PHONY: dev
+dev: install $(ICONS)
+	npm run dev
 
 .PHONY: clean
 clean:
+	rm -rf "$(ROOT_DIR)/dist/"
+
+.PHONY: clobber
+clobber: clean
 	rm -rf "$(ROOT_DIR)/node_modules"
 
 # Shell that adds node_modules/.bin to PATH
